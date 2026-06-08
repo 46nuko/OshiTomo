@@ -1,24 +1,25 @@
-# README
+# オシトモ
+<!--​READMEを作成する際は、項目内の【補足説明】は削除して完成させてください。-->
+## サイト概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### サイトテーマ
+同じ推し活の趣味で繋がりを持つ事ができるSNS
+### テーマを選んだ理由
+私は自身の趣味である「推し活」において、「イベントへの単独参戦に寂しさを感じたり、ランダムグッズの交換相手が周りにいなかったりした経験」から、同じ熱量や目的を持つ仲間と深く交流したいと考えました。
+ただ、現代の推し活は1人で完結しやすいため、「イベントの同行者が見つからない」「熱量を持って語り合える相手がいない」といった具体的な交流の機会損失が発生しており、既存のSNSでは相手の価値観が分からず声をかける心理的ハードルが高いという課題もあります。
+そこで、「お互いの目的や熱量が事前に可視化される安全な『きっかけ』があれば課題は解決する」と考え、ユーザーが主体となって安心して募集を立てられるSNSとしてこのテーマとしました。
+### ターゲットユーザ
+​周囲に同じ熱量で語り合える趣味の友達がいない人
+ランダムグッズの「交換相手」をトラブルなくスムーズに見つけたい人
+### 主な利用シーン
+自分の推しのライブやイベントへの単独参戦が決まり、現地で一緒に過ごしたり連番で楽しんだりできる同行者を探したい時。
+ランダムのグッズをまとめ買いした際、自分の推しではないグッズが当たり、同じエリアやイベント会場でスムーズに交換相手を見つけたい時。
+周囲に同じ熱量で語り合える友達がいないため、リアルタイムで熱く感想を共有し合いたい時。
+## 設計書
+後ほど作成予定
+## 開発環境
+- OS：Windows
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Visual Studio Code（VSCode）

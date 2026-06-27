@@ -1,0 +1,2 @@
+class DmComment < ApplicationRecord
+end

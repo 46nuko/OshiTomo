@@ -1,0 +1,6 @@
+<% @posts.each do |post| %>
+  <div>
+    <p>説明：<%= post.body %></p>
+    <p>ユーザーネーム：<%= post.user.name %></p>
+  </div>
+<% end %>

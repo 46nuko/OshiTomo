@@ -39,6 +39,10 @@
       <li>
         <%= link_to "ログイン", new_session_path %>
       </li>
+      <li>
+        <%= button_to "ゲストログイン（閲覧用）", guest_sign_in_path %>
+      </li>
+
     <% end %>
   </header>
     <%= yield %>

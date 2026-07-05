@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'homes#about'
+  post "guest_sign_in", to: "guest_sessions#create", as: :guest_sign_in
   resources :posts
   resources :users, only: [:new, :create] , path_names: { new: 'sign_up' }
   resource :session

@@ -2,5 +2,8 @@
   <div>
     <p>説明：<%= post.body %></p>
     <p>ユーザーネーム：<%= post.user.name %></p>
+    <% if post.image.attached? %>
+      <p><%= image_tag post.image, size: "200x200" %></p>
+    <% end %>
   </div>
 <% end %>

@@ -15,4 +15,8 @@ class User < ApplicationRecord
   def guest_user?
     email_address == GUEST_USER_EMAIL
   end
+
+  def is_active?
+    is_active
+  end
 end

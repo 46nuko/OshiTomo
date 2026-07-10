@@ -9,7 +9,11 @@ Rails.application.routes.draw do
     root to: 'homes#about'
     post "guest_sign_in", to: "guest_sessions#create", as: :guest_sign_in
     resources :posts
-    resources :users, only: [:new, :create, :show, :edit, :update, :index] , path_names: { new: 'sign_up' }
+    resources :users, only: [:new, :create, :show, :edit, :update, :index] , path_names: { new: 'sign_up' } do
+      member do
+        patch :withdraw 
+      end
+    end
     resource :session
     resources :passwords, param: :token
   end

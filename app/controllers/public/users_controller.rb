@@ -32,6 +32,14 @@ class Public::UsersController < Public::ApplicationController
     end
   end
 
+  def withdraw
+    # 安全のため、URLのIDではなく現在ログイン中のユーザー（Current.user）を対象にします
+    @user = Current.user 
+    @user.update!(is_active: false)
+    terminate_session
+    redirect_to root_path, notice: "退会処理が完了しました。"
+  end
+
   private
  
   def user_params

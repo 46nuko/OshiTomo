@@ -1,3 +1,21 @@
+<div>
+  <h3><%= @user.name %></h3>
+  <%= image_tag @user.get_profile_image(200,200) %>
+</div>
+
+<% @posts.each do |post| %>
+<div>
+  <%= link_to post_path(post.id) do %>
+    <% if post.image.attached? %>
+      <%= image_tag post.image %>
+    <% end %>
+  <% end %>
+  <p>投稿ユーザー画像：<%= image_tag post.user.get_profile_image(100,100) %></p>
+  <p>説明：<%= post.body %></p>
+  <p>ユーザーネーム：<%= post.user.name %></p>
+</div>
+<% end %>
+
 <% unless @user.guest_user? %>
   <div class="row">
     <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-block" do %>

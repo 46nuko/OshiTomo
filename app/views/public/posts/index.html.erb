@@ -1,5 +1,8 @@
 <% @posts.each do |post| %>
   <div>
+    <% if post.image.attached? %>
+      <%= image_tag post.image %>
+    <% end %>
     <p>説明：<%= post.body %></p>
     <p>ユーザーネーム：<%= post.user.name %></p>
     <% if post.image.attached? %>

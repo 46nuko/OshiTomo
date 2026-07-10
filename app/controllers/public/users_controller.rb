@@ -16,6 +16,7 @@ class Public::UsersController < Public::ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @posts = @user.posts
   end
 
   def edit
@@ -33,7 +34,6 @@ class Public::UsersController < Public::ApplicationController
   end
 
   def withdraw
-    # 安全のため、URLのIDではなく現在ログイン中のユーザー（Current.user）を対象にします
     @user = Current.user 
     @user.update!(is_active: false)
     terminate_session

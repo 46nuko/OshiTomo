@@ -13,6 +13,6 @@ class User < ApplicationRecord
   end
 
   def guest_user?
-    email == GUEST_USER_EMAIL
+    email_address == GUEST_USER_EMAIL
   end
 end

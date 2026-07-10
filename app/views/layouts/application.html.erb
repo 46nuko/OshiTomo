@@ -42,7 +42,9 @@
       <li>
         <%= button_to "ゲストログイン（閲覧用）", guest_sign_in_path %>
       </li>
-
+      <li>
+        <%= link_to "管理者ログイン", new_admin_session_path %>
+      </li>
     <% end %>
   </header>
     <%= yield %>

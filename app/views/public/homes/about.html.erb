@@ -1,2 +1,19 @@
-<h1>Homes#about</h1>
-<p>Find me in app/views/homes/about.html.erb</p>
+<main>
+  <p id="notice"></p>
+  <div class="container">
+    <div class="row">
+      <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
+        <h1>welcome to <i class="fa-solid fa-book"></i><strong>OshiTomo</strong>  !!</h1>
+        <p><i class="fa-solid fa-book"></i><strong>OshiTomo</strong>は</p>
+        <p>同じ推し活の趣味で繋がりを持つ事ができるSNSです‼︎</p>
+        <div class="btn-wrapper col-10 mx-auto">
+         <div class="d-grid gap-3 mb-5">
+            <%= link_to "ログイン", new_session_path, class: "btn btn-info btn-lg sign_in" %>
+            <%= link_to "新規登録", new_user_path, class: "btn btn-success btn-lg sign_up" %>
+            <%= button_to "ゲストログイン", guest_sign_in_path, class: "btn btn-info btn-lg sign_in" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

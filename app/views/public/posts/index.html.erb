@@ -1,10 +1,15 @@
 <% @posts.each do |post| %>
   <div>
+  <p>
+    <%= link_to post_path(post.id) do %>
+      <%= image_tag post.user.get_profile_image(100,100) %>
+    <% end %>
+  </p>
+  <p>ユーザーネーム：<%= post.user.name %></p>
+  <p>：<%= post.body %></p>
     <% if post.image.attached? %>
       <%= image_tag post.image %>
     <% end %>
-    <p>説明：<%= post.body %></p>
-    <p>ユーザーネーム：<%= post.user.name %></p>
     <% if post.image.attached? %>
       <p><%= image_tag post.image, size: "200x200" %></p>
     <% end %>

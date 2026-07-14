@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   normalizes :email_address, with: ->(e) { e.strip.downcase }
   has_one_attached :profile_image
-
+  validates :name, length: { in: 2..20 }, uniqueness: true
   GUEST_USER_EMAIL = "guest@example.com"
 
   def self.guest
